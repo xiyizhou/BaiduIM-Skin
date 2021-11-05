@@ -1,6 +1,6 @@
 适用于macOS 的百度输入法皮肤，极简风格，高度自定义。
 
-![百度输入法 for Mac皮肤](https://static-1251069384.cos.ap-shanghai.myqcloud.com/img/iShot2021-11-05%2018.58.46.png)
+<img src="https://static-1251069384.cos.ap-shanghai.myqcloud.com/img/iShot2021-11-05%2018.58.46.png" alt="百度输入法 for Mac皮肤" style="zoom:33%;" />
 
 ## 皮肤特色
 
