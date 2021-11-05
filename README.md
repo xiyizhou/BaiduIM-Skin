@@ -1,45 +1,100 @@
-# 百度 Mac 输入法皮肤
+适用于macOS 的百度输入法皮肤，极简风格，高度自定义。
 
-目前只完成了单行模式，还没有双行模式，没有状态栏。
+![百度输入法 for Mac皮肤](https://static-1251069384.cos.ap-shanghai.myqcloud.com/img/iShot2021-11-05%2018.58.46.png)
 
-因为自己用不着，后期也无开发计划。
+## 皮肤特色
 
-如君需要，下载 bdskk 文件，即可。
+1. 适用于百度输入法 for Mac。
+2. 完美适配 macOS Monterey。
+3. 极简风格，专注输入。
+4. 高亮首选词，选词更聚焦。
+5. 高度自定义，可根据需求个性化配置。
 
-如需修改，下载 源文件，修改打包为 bdskk 格式即可。
+## 更新日志
 
-只适用于 Mac 版百度输入法，其他系统没有测试。
+###  `V1.1` 2021年11月05日
 
-## 皮肤效果
+1. 统一文件命名规则。
+2. 添加备注，便于客制化。
+3. 去掉右侧翻页图标，整体更简洁。
+4. 添加 `global.ini` 文件。
+5. 增加石墨色皮肤。
+6. 更新皮肤示例。
 
-*仿 Mac 蓝色*
+###  `V1.0` 2021年05月18日
 
-![](https://github.com/xiyizhou/BaiduIM-Macskin/blob/main/%E6%95%88%E6%9E%9C%E5%9B%BE/%E4%BB%BFmac%20%E8%93%9D.png)
+1. 皮肤发布。
 
-*仿 Mac 暗色*
+## 使用说明
 
-![](https://github.com/xiyizhou/BaiduIM-Macskin/blob/main/%E6%95%88%E6%9E%9C%E5%9B%BE/%E4%BB%BF%20mac%20%E6%9A%97%E8%89%B2.png)
+1. 无特殊需求时，可直接下载` examples`文件夹内的`.bdskk`格式皮肤包，双击安装使用。
+2. 如需定制，可修改文件。
+3. 把皮肤资源文件夹内的内容压缩成`.zip`格式压缩包，不要压缩整个文件夹。
+4. 把压缩包修改为`.bdskk`格式皮肤包。
+5. 双击安装包，导入到百度输入法。
 
-*仿 Mac 粉*
+## 文件结构
 
-![](https://github.com/xiyizhou/BaiduIM-Macskin/blob/main/%E6%95%88%E6%9E%9C%E5%9B%BE/%E4%BB%BF%20mac%20%E7%B2%89.png)
+```json
+└── src
+    ├── global.ini
+    ├── horizontal.ini
+    ├── single.ini
+    ├── statusbar.ini
+    └── *.png
+└── examples
+└── README.md
+└── LICENSE
+```
 
-*仿 Mac 绿*
+1. ` src`: 资源文件夹。
 
-![](https://github.com/xiyizhou/BaiduIM-Macskin/blob/main/%E6%95%88%E6%9E%9C%E5%9B%BE/%E4%BB%BF%20mac%20%E7%BB%BF.png)
+2. ` globe.ini`: 全局定义文件，可以定义皮肤名称、皮肤类型、皮肤描述，作者 ID、邮箱、网址等，相关信息会在百度 Mac 输入法外观设置页中显示。
 
-*仿谷歌粉色*
+3. ` horizontal.ini`: 双行模式配置文件。双行皮肤是指同时显示输入码和候选字的模式。
 
-![](https://github.com/xiyizhou/BaiduIM-Macskin/blob/main/%E6%95%88%E6%9E%9C%E5%9B%BE/%E4%BB%BF%20%E8%B0%B7%E6%AD%8C%E7%B2%89%E8%89%B2.png)
+   **输入区域&候选字区域**： 框定双行模式的背景图范围，如图所示。两个区域各参数的设置原理相同。
 
-*淡蓝*
+   ![百度 Mac 输入法双行皮肤](https://static-1251069384.cos.ap-shanghai.myqcloud.com/img/2021110501.png)
 
-![](https://github.com/xiyizhou/BaiduIM-Macskin/blob/main/%E6%95%88%E6%9E%9C%E5%9B%BE/%E6%B7%A1%E8%93%9D.png)
+   **九宫区域 **： 候选条背景以九宫扩展的方式适配不同的候选字长度。 X / Y / 宽度 / 高度 四个参数定义了下图中的绿色区域，也就是九宫格的中宫。
 
-*淡橙*
+   ![输入法九宫区域和放大方式](https://static-1251069384.cos.ap-shanghai.myqcloud.com/img/2021110502.png)
 
-![](https://github.com/xiyizhou/BaiduIM-Macskin/blob/main/%E6%95%88%E6%9E%9C%E5%9B%BE/%E6%B7%A1%E6%A9%99.png)
+   **内容边距**： 输入码离背景切图边缘的距离。大概
 
-*淡粉*
+   **字体 & 颜色** 字体和候选字的颜色采用 16 进制 RGB 格式。各字段所指元素如下图所示：
 
-![](https://github.com/xiyizhou/BaiduIM-Macskin/blob/main/%E6%95%88%E6%9E%9C%E5%9B%BE/%E6%B7%A1%E7%B2%89.png)
+   ![百度 Mac 输入法字体和颜色](https://static-1251069384.cos.ap-shanghai.myqcloud.com/img/2021110503.png)
+
+   **间隔符号**：设定数字序号与候选字之间的间隔符号。空格为 SPACE （大写），其他字符直接输入。
+
+4. ` single.ini`: 单行模式配置文件。单行皮肤是指只显示候选字的模式，在 Mac 上显得更干净简洁。单行模式只需设定候选字区域的参数。参数设置生效的原理同 双行皮肤。
+
+5. ` statusbar.ini`: 状态栏配置文件。状态栏上的图标可以排列在状态栏背景图的任意位置上，你只需要设置它的横纵坐标即可。所有的坐标值以左上角为基准。
+
+6. ` *.png`: 皮肤切片文件，可以使用自己制作的切图替换对应文件。
+
+7. ` examples`: 示例皮肤，可直接下载使用。
+
+8. ` README.md`: 项目自述文件。
+
+9. ` LICENSE`: 本项目遵循 [MIT license](https://github.com/xiyizhou/BaiduIM-Skin/blob/main/LICENSE) ，您可以使用、复制、修改、合并、出版发行、散布、再授权及贩售软件及软件的副本，也可以根据程序的需要修改授权条款为适当的内容。
+
+## 贡献
+
+有任何问题、疑问、建议，请随时提出。
+
+本套皮肤还有以下问题需要解决，因不了解百度输入法程序代码，短时间内本开发者无法实现，如您有办法实现，欢迎贡献。
+
+- [ ] 完善状态栏、双行皮肤。
+
+- [ ] 候选区字体与背景色垂直居中。
+
+- [ ] 可以自定义候选字数字序号的字形、字号、颜色，实现类似于 Mac 自带输入法显示效果，以突出显示候选词。
+
+- [ ] 当前皮肤格式为`.bdskk` ，需要切换到百度 Mac 输入法默认皮肤格式 `.bpsm` 。
+
+- [ ] 开发 iPhone 和 iPad 端皮肤类似可以自定义首选字底色的皮肤。
+
+
