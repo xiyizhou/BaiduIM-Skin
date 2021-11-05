@@ -35,7 +35,7 @@
 
 ## 文件结构
 
-```json
+```
 └── src
     ├── global.ini
     ├── horizontal.ini
